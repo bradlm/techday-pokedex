@@ -1,0 +1,57 @@
+<!--
+  HTML! Hypertext Markup Language!
+  The HTML tag lets the browser know that this is
+  HTML data being loaded (as oppose to other file types
+  like XML)
+-->
+<html>
+  <!-- 
+    The header is where assorted metadata goes. 
+    This is stuff that isn't necessarily visible
+    as part of the content of the page, but affects
+    how the page works, looks, or interacts with
+    things like search engines.
+  -->
+  <header>
+    <!--
+      Page title. This is the text in the tab when
+      viewed in a browser. This might not show up
+      in the repl.it output frame, though.
+    -->
+    <title>Pokedex App</title>
+    <!--
+      Styles are loaded below with the 'link' element.
+    -->
+    <link href="misc/styles.css" rel="stylesheet" />
+  </header>
+  <!-- 
+    The body is where the website content goes!
+  -->
+  <body>
+    <!--
+      Below is our greeting! It's pure HTML!
+    -->
+    <div 
+      id="greeting" 
+      style="text-align:center"
+    >
+      <!-- TODO 1: update the greeting! -->
+      Hello, world!
+    </div>
+
+    <!--
+      The 'app' div is where we will load our JS app.
+    -->
+    <div id="app" class="flex-center-col"></div>
+
+    <!--
+      Below are script elements.
+      They load JavaScript files into the HTML. 
+      We load app.js last so it has access to all of the code from
+      pokemonData.js and misc/render.js
+    --> 
+    <script src="pokemonData.js"></script>
+    <script src="misc/render.js"></script>
+    <script src='app.js'></script>
+  </body>
+</html>
